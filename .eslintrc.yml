@@ -3,9 +3,6 @@ root: true
 env:
   node: true
 
-plugins:
-  - "@nrwl/nx"
-
 extends:
   - "eslint:recommended"
   - "plugin:vue/vue3-essential"
@@ -276,12 +273,6 @@ overrides:
       - yaml
     extends:
       - plugin:yaml/recommended
-
-  - files: ["*.js"]
-    extends:
-      - plugin:@nrwl/nx/javascript
-    rules:
-      semi: [error, never]
 
   - files: ["*.ts"]
     rules:

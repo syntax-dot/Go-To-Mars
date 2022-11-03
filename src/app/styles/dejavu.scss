@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: local('DejaVu'), local('DejaVu Sans'),
+  url('../../assets/fonts/DejaVu/dejavusans.woff') format('woff'),
+  url('../../assets/fonts/DejaVu/dejavusans.woff2') format('woff2'),
+  url('../../assets/fonts/DejaVu/dejavusans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: local('DejaVu'), local('DejaVu Sans'),
+  url('../../assets/fonts/DejaVu/dejavusansbold.woff') format('woff'),
+  url('../../assets/fonts/DejaVu/dejavusansbold.woff2') format('woff2'),
+  url('../../assets/fonts/DejaVu/dejavusans.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DejaVu Sans';
+  src: local('DejaVu'), local('DejaVu Sans'),
+  url('../../assets/fonts/DejaVu/dejavusansextralight.woff') format('woff'),
+  url('../../assets/fonts/DejaVu/dejavusansextralight.woff2') format('woff2'),
+  url('../../assets/fonts/DejaVu/dejavusansextralight.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}

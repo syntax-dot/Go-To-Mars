@@ -7,7 +7,7 @@ import ContactsPage from '../views/ContactsPage.vue'
 import GuaranteesPage from '../views/GuaranteesPage.vue'
 
 export const routes: RouteRecordRaw[] = [
-  { path: '/', component: HomePage, name: 'home' },
+  { path: '', component: HomePage, name: 'home' },
   { path: '/Technology', component: TechnologyPage, name: 'technology' },
   { path: '/FlightSchedule', component: FlightSchedulePage, name: 'flightSchedule' },
   { path: '/Guarantees', component: GuaranteesPage, name: 'guarantees' },
