@@ -1,6 +1,7 @@
 <template>
   <div :class="$style.root">
     <Card v-for="card in cards"
+          :key="card.bottomWord"
           :topWord="card.topWord"
           :header="card.header"
           :bottomWord="card.bottomWord"
@@ -30,8 +31,8 @@ const cards: CardProps[] = [
   overflow: hidden;
   padding: 0px;
 
-  &:hover > .card::after {
-    opacity: 1;
-  }
+  // &:hover > .card::after {
+  //   opacity: 1;
+  // }
 }
 </style>

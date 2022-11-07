@@ -32,6 +32,8 @@ const links: NavigationLinkProps[] = [
   /* grid-template-columns: 1fr max-content max-content 1fr; */
   position: relative;
   z-index: 10;
+  /* filter: blur(1px); */
+  backdrop-filter: blur(2px);
   box-sizing: border-box;
   height: 100px;
   align-items: center;

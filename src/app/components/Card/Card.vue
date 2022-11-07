@@ -3,11 +3,11 @@
        :class="$style.card"
        :style="{ '--mouse-x': `${x}px`, '--mouse-y': `${y}px` }"
        @mousemove="handleMouseMove">
-    <div :class="$style['card-content']">
-      <div>{{ topWord }}</div>
-      <h1>{{ header }}</h1>
-      <div>{{ bottomWord }}</div>
-    </div>
+    <!-- <div :class="$style['card-content']"> -->
+    <div>{{ topWord }}</div>
+    <h1>{{ header }}</h1>
+    <div>{{ bottomWord }}</div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -33,12 +33,8 @@ function handleMouseMove(e: MouseEvent): void {
 </script>
 
 <style module>
-:root {
-  --bg-color: rgba(20, 20, 20, 0);
-  --card-color: rgba(23, 23, 23, 1);
-}
 .card {
-  /* background-color: rgba(255, 255, 255, 0.1); */
+  /* background-color: rgba(255, 255, 255, 0.01); */
   cursor: pointer;
   display: grid;
   grid-template-rows: max-content max-content max-content;
@@ -53,7 +49,7 @@ function handleMouseMove(e: MouseEvent): void {
 }
 
 .card:hover {
-    border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .card > div {
@@ -92,61 +88,5 @@ function handleMouseMove(e: MouseEvent): void {
     transparent 40%
   );
   z-index: 1;
-}
-
-/* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
-
-@media (max-width: 1000px) {
-  body {
-    align-items: flex-start;
-    overflow: auto;
-  }
-
-  #cards {
-    max-width: 1000px;
-    padding: 10px 0px;
-  }
-
-  .card {
-    flex-shrink: 1;
-    width: calc(50% - 4px);
-  }
-}
-
-@media (max-width: 500px) {
-  .card {
-    height: 180px;
-  }
-
-  .card-image {
-    height: 80px;
-  }
-
-  .card-image > i {
-    font-size: 3em;
-  }
-
-  .card-info-wrapper {
-    padding: 0px 10px;
-  }
-
-  .card-info > i {
-    font-size: 0.8em;
-  }
-
-  .card-info-title > h3 {
-    font-size: 0.9em;
-  }
-
-  .card-info-title > h4 {
-    font-size: 0.8em;
-    margin-top: 4px;
-  }
-}
-
-@media (max-width: 320px) {
-  .card {
-    width: 100%;
-  }
 }
 </style>

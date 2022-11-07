@@ -33,7 +33,7 @@ import { StartButton } from '../components/StartButton'
   width: 1100px;
   margin: 0 auto;
 
-  background-image: url("../../assets/planet-background.jpg");
+  background-image: url("../../assets/backgrounds/planet-background.jpg");
   background-size: 180%;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ import { StartButton } from '../components/StartButton'
   left: 0;
   top: 0;
   pointer-events: none;
-  background-image: url("../../assets/stars-background.png");
+  background-image: url("../../assets/backgrounds/stars-background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
