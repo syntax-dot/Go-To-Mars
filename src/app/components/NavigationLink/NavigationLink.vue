@@ -16,7 +16,7 @@ const props = defineProps<NavigationLinkProps>()
   box-sizing: border-box;
   position: relative;
   font-size: 14px;
-  font-weight: lighter;
+  font-weight: bold;
   width: fit-content;
   padding-bottom: 8px;
   padding-top: 8px;

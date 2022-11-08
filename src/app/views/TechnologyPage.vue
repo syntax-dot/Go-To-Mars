@@ -1,8 +1,6 @@
 <template>
-  <div :class="$style.root"
-       @scroll="handleScroll">
-    <!-- <div ref="image"
-         :class="$style.paralax">
+  <div :class="$style.root">
+    <div :class="$style.paralax">
       <div :class="$style.rocket"/>
       <div/>
       <div :class="$style.paralax_content">
@@ -22,15 +20,7 @@
                 d="M2.000,5.000 L15.000,18.000 L28.000,5.000"/>
         </svg>
       </div>
-    </div> -->
-
-    <!-- <div class="q-pa-md q-gutter-md">
-      <div class="row justify-between">
-        <q-parallax src="https://cdn.quasar.dev/img/parallax2.jpg">
-          <h1 class="text-white">Basic</h1>
-        </q-parallax>
-      </div>
-    </div> -->
+    </div>
 
     <div :class="$style.content">
       *

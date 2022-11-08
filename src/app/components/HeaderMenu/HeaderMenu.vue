@@ -57,7 +57,8 @@ const links: NavigationLinkProps[] = [
 a {
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   color: rgba(255, 255, 255, 0.8);
-  font-size: 16px;
+  /* font-size: 16px; */
+  /* font-weight: bold; */
 }
 
 a:hover {

@@ -89,11 +89,11 @@ import { StartButton } from '../components/StartButton'
 }
 
 .intro > h1 {
-  font-size: 52px;
+  font-size: 62px;
 }
 
 .intro > div {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 400;
 }
 </style>

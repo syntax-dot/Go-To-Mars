@@ -44,12 +44,7 @@ a {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: "DejaVu Sans";
-  src: local("DejaVu Sans"), local("DejaVuSans"), url("dejavusans.woff2") format("woff2"),
-    url("/src/assets/fonts/DejaVu/dejavusans.woff") format("woff"),
-    url("/src/assets/fonts/DejaVu/dejavusans.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+#app {
+  font-family: 'Roboto', sans-serif;
 }
 </style>
