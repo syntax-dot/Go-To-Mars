@@ -1,6 +1,8 @@
 <template>
-  <div :class="$style.root">
-    <div :class="$style.paralax">
+  <div :class="$style.root"
+       @scroll="handleScroll">
+    <div ref="image"
+         :class="$style.paralax">
       <div :class="$style.rocket"/>
       <div/>
       <div :class="$style.paralax_content">
@@ -8,7 +10,7 @@
           FALCON HEAVY
         </h1>
         <h3 :class="$style.paralax_title">
-          THE WORLD’S MOST POWERFUL ROCKET
+          THE WORLD`S MOST POWERFUL ROCKET
         </h3>
       </div>
 
@@ -29,21 +31,28 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 
+const image = ref<HTMLDivElement>()
+
+function handleScroll(e: any) {
+  console.log(e)
+}
 </script>
 
 <style module>
 .root {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  width: 100%;
+  grid-template-rows: max-content 1fr;
+  /* width: 100%; */
   height: auto;
   overflow: hidden;
 }
 
 .paralax {
   display: grid;
-  grid-template-rows: 100px max-content;
+  height: calc(100vh - 100px);
+  /* grid-template-rows: 100px max-content; */
   /* height: calc(100% - 100px); */
 }
 
@@ -51,7 +60,7 @@
   position: absolute;
   opacity: 1;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 100px);
   left: 0;
   top: 0;
 
@@ -65,6 +74,7 @@
 .paralax_content {
   position: relative;
   text-align: center;
+
   z-index: 2;
 }
 
@@ -75,6 +85,8 @@
   width: 30px;
   height: 20px;
   z-index: 2;
+
+  animation: pulsate-bck 0.5s ease-in-out infinite both;
 }
 
 .paralax_label {
@@ -102,8 +114,36 @@
 .content {
   position: relative;
   height: 100vh;
-  width: 100%;
   background-color: #06121b;
   z-index: 2;
+}
+
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 </style>

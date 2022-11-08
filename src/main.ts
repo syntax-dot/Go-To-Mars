@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
-import App from './app/App.vue'
-import { router } from './app/router'
-import './app/styles/globals.scss'
+import App from './App.vue'
+import vuetify from './plugins/vuetify'
+import { loadFonts } from './plugins/webfontloader'
+
+loadFonts()
 
 createApp(App)
-  .use(router)
-  // .use(i18n)
+  .use(vuetify)
   .mount('#app')
