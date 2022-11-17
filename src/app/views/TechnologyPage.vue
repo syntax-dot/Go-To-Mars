@@ -31,11 +31,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-const image = ref<HTMLDivElement>()
-
-function handleScroll(e: any) {
-  console.log(e)
-}
 </script>
 
 <style module>
