@@ -13,7 +13,8 @@ import { HeaderMenu } from './components/HeaderMenu'
 </script>
 
 <style module lang="scss">
-// $
+@import "../css/quasar-variables.scss";
+
 .root {
   display: grid;
   position: relative;

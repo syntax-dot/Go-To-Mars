@@ -2,7 +2,9 @@
   <div class="q-pa-md q-gutter-md">
     <div class="row justify-between">
       <QParallax src="https://cdn.quasar.dev/img/parallax2.jpg">
-        <h1 class="text-white">Basic</h1>
+        <Transition name="fade">
+          <h1 class="text-white">Basic</h1>
+        </Transition>
       </QParallax>
     </div>
   </div>
@@ -12,3 +14,10 @@
 import { QParallax } from 'quasar'
 
 </script>
+
+<style module lang="scss">
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+</style>
