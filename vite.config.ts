@@ -10,7 +10,6 @@ function generateScopedName(name: string, filename: string) {
   return `${file}_${name}`
 }
 
-// https://vitejs.dev/config/
 export default defineConfig({
   css: {
     modules: {
@@ -26,7 +25,7 @@ export default defineConfig({
     }),
 
     quasar({
-      sassVariables: 'src/quasar-variables.sass',
+      sassVariables: 'src/css/quasar-variables.scss',
       autoImportComponentCase: 'pascal',
     }),
   ],

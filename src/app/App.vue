@@ -12,14 +12,15 @@
 import { HeaderMenu } from './components/HeaderMenu'
 </script>
 
-<style module>
+<style module lang="scss">
+// $
 .root {
   display: grid;
   position: relative;
   grid-template-rows: max-content 1fr;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(6, 18, 27);
+  background-color: $primary;
 }
 </style>
 
