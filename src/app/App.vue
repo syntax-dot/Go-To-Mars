@@ -5,6 +5,8 @@
     <div :class="$style.content">
       <router-view/>
     </div>
+
+    <div :class="$style.footer"/>
   </div>
 </template>
 

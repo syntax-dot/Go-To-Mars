@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md q-gutter-md">
     <div class="row justify-between">
-      <QParallax src="https://cdn.quasar.dev/img/parallax2.jpg">
+      <QParallax src="`${url}`">
         <Transition name="fade">
           <h1 class="text-white">Basic</h1>
         </Transition>
@@ -12,7 +12,9 @@
 
 <script lang="ts" setup>
 import { QParallax } from 'quasar'
+import { ParalaxProps } from './Paralax.props'
 
+defineProps<ParalaxProps>()
 </script>
 
 <style module lang="scss">
