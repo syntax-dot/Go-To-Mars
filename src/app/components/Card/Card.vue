@@ -45,8 +45,7 @@ function handleMouseMove(e: MouseEvent): void {
   text-align: center;
   box-sizing: border-box;
   padding-top: 10px;
-  opacity: 0.8;
-  transition: opacity .5px;
+  transition: 0.3s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 

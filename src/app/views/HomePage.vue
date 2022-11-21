@@ -85,7 +85,7 @@ import { StartButton } from '../components/StartButton'
 .right {
   display: grid;
   justify-items: start;
-  transform: translate(45px, 0px);
+  transform: translate(90px, 0px);
 }
 
 .intro > h1 {
