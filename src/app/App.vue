@@ -6,11 +6,14 @@
       <router-view/>
     </div>
 
-    <div :class="$style.footer"/>
+    <div :class="$style.footer">
+      <Footer/>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Footer } from './components/Footer'
 import { HeaderMenu } from './components/HeaderMenu'
 </script>
 
@@ -19,10 +22,8 @@ import { HeaderMenu } from './components/HeaderMenu'
 
 .root {
   display: grid;
-  position: relative;
-  grid-template-rows: max-content 1fr;
-  height: 100vh;
-  width: 100vw;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-areas: 'Header' 'Content' 'Footer';
   background-color: $primary;
 }
 </style>
@@ -41,7 +42,7 @@ html {
 }
 
 body {
-  color: aliceblue;
+  color: #fff;
 }
 
 a {

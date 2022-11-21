@@ -1,7 +1,6 @@
 <template>
   <div :class="$style.root">
     <div :class="$style.stars"/>
-
     <div :class="$style.left">
       <div :class="$style.intro">
         <h1 :class="$style.clip">ПУТЕШЕСТВИЕ</h1>
@@ -28,7 +27,7 @@ import { StartButton } from '../components/StartButton'
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
-  height: 100%;
+  height: 89vh;
   align-items: center;
   width: 1100px;
   margin: 0 auto;
@@ -39,17 +38,10 @@ import { StartButton } from '../components/StartButton'
   background-repeat: no-repeat;
 }
 
-@media (max-widh: 768px) {
-  .root {
-    justify-content: flex-start;
-    background-image: none;
-  }
-}
-
 .stars {
   position: absolute;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   left: 0;
   top: 0;
   pointer-events: none;

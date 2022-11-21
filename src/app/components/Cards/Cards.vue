@@ -30,9 +30,21 @@ const cards: CardProps[] = [
   margin: 0px;
   overflow: hidden;
   padding: 0px;
+  animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
   // &:hover > .card::after {
   //   opacity: 1;
   // }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 </style>

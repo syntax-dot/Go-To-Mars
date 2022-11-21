@@ -1,9 +1,14 @@
 <template>
   <div :class="[$style.root, {
-    [$style.hidden]: hidden
+    [$style.hidden]: scrollTop > hidenTarget
   }]">
-    <h1>{{ title }}</h1>
-    <div v-show="description"> {{ description }} </div>
+    <div :class="$style.title">
+      <h1>{{ title }}</h1>
+      <div v-show="description"
+           :class="$style.description">
+        {{ description }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,10 +16,10 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import { DisappearingTextProps } from './DisappearingText.props'
 
-defineProps<DisappearingTextProps>()
+const props = defineProps<DisappearingTextProps>()
 
 const scrollTop = ref(0)
-const hidenTarget = 100
+const hidenTarget = props.hidenTarget ?? 100
 
 const hidden = ref(false)
 console.log(hidden.value)
@@ -43,10 +48,50 @@ function handleOpacity(scrollTop: number, hidenTarget: number) {
 
 <style module lang="scss">
 .root {
+  text-align: center;
+  transition: opacity .8s;
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
+.root > h1 {
+  text-transform: uppercase;
 }
 
 .hidden {
   opacity: 0;
+}
+
+.description {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+</style>
+
+<style>
+.title-move,
+.title-enter-active,
+.title-leave-active {
+  transition: all 0.5s ease;
+}
+
+.title-enter-from,
+.title-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.title-leave-active {
+  position: absolute;
 }
 </style>
