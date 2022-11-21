@@ -4,7 +4,7 @@
       <div :class="$style.rocket"
            src="../../assets/backgrounds/falcon-rocket.webp">
         <Transition name="fade">
-          <h1 class="text-white">Basic</h1>
+          <h1 class="text-white">Falcon Heavy</h1>
         </Transition>
       </div>
       <div :class="$style.some"/>

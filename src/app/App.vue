@@ -48,6 +48,11 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 #app {
   font-family: 'Roboto', sans-serif;
 }
