@@ -85,8 +85,9 @@ const text = 'Начать путешествие'
 }
 
 .button {
-  padding: 8px 22px;
-  font-size: 14px;
+  text-align: center;
+  padding: 4px;
+  font-size: 0.9rem;
   position: relative;
   width: 200px;
   height: 32px;

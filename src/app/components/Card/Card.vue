@@ -38,26 +38,30 @@ function handleMouseMove(e: MouseEvent): void {
   cursor: pointer;
   display: grid;
   grid-template-rows: max-content max-content max-content;
-  grid-gap: 10px;
+  gap: 10px;
   height: 185px;
   width: 185px;
   position: relative;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 36px;
+  padding-top: 10px;
+  opacity: 0.8;
+  transition: opacity .5px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card:hover {
   border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 1;
 }
 
 .card > div {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .card > h1 {
-  font-size: 50px;
+  font-size: 3.6rem;
+  font-weight: bold;
 }
 
 .card::before,

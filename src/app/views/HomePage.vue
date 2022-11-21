@@ -60,7 +60,7 @@ import { StartButton } from '../components/StartButton'
 }
 
 .left {
-  transform: translate(-36px, -20px);
+  transform: translate(-37px, -32px);
   display: grid;
   grid-gap: 50px;
   align-content: start;
@@ -71,7 +71,7 @@ import { StartButton } from '../components/StartButton'
   background: linear-gradient(to right, #ffffff 10%, #ff3c00 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+  /* clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%); */
 }
 
 .btn_start {
@@ -89,11 +89,12 @@ import { StartButton } from '../components/StartButton'
 }
 
 .intro > h1 {
-  font-size: 62px;
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 .intro > div {
-  font-size: 22px;
+  font-size: 1.4rem;
   font-weight: 400;
 }
 </style>
