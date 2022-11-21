@@ -1,6 +1,6 @@
 <template>
   <div :class="[$style.root, {
-    [$style.opacity]: hidden
+    [$style.hidden]: hidden
   }]">
     <Logo :class="$style.logo"/>
 
@@ -32,7 +32,6 @@ const scrollTop = ref(0)
 const hidenTarget = 100
 
 const hidden = ref(false)
-console.log(hidden.value)
 
 onMounted(() => {
   window.addEventListener('wheel', handleScroll)
@@ -74,7 +73,7 @@ function handleOpacity(deltaY: number, scrollTop: number, hidenTarget: number) {
   transition: opacity .5s;
 }
 
-.opacity {
+.hidden {
   opacity: 0;
 }
 
