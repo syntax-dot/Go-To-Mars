@@ -45,7 +45,8 @@ import { DisappearingText } from '../components/DisappearingText'
 
 <style module>
 .root {
-
+  height: 100%;
+  width: 100%;
 }
 
 .wrapper {

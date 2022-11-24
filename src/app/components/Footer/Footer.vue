@@ -17,7 +17,9 @@
 
 <style module>
 .root {
+  position: relative;
   height: 60px;
+  width: 100%;
   text-align: center;
   background-color: #000;
   margin: auto;
